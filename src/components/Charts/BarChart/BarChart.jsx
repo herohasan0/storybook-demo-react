@@ -33,7 +33,8 @@ const BarChart = ({
   show_legend,
   show_y_labels,
   padding,
-  colors
+  colors,
+  legendPosition
 }) => {
   // Vertical bar chart options
   const options = {
@@ -58,7 +59,7 @@ const BarChart = ({
     plugins: {
       legend: {
         display: show_legend,
-        position: 'top'
+        position: legendPosition
       }
     },
     layout: {
@@ -109,6 +110,7 @@ BarChart.propTypes = {
    * Toggle legend title for the chart
    */
   show_legend: PropTypes.bool,
+  legendPosition: PropTypes.oneOf(['top', 'left', 'right', 'bottom']),
   /**
    * Toggle Y axis labels
    */
@@ -125,6 +127,7 @@ BarChart.defaultProps = {
   rounded: false,
   horizontal: false,
   show_legend: true,
+  legendPosition: 'top',
   show_y_labels: true,
   padding: 60,
   colors: [
