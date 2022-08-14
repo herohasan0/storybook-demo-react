@@ -1,0 +1,19 @@
+<link rel="shortcut icon" href="/b2metric-icon.ico" />
+
+
+<link rel="icon" type="image/png" href="/b2metric-icon.png" sizes="192x192" />
+
+
+<script>
+  var observer = new MutationObserver(function (mutations) {
+    if (document.title.match(/Storybook$/)) {
+      document.title = 'B2Metric UI Library'
+    }
+  }).observe(document.querySelector('title'), {
+    childList: true,
+    subtree: true,
+    characterData: true
+  })
+</script>
+
+

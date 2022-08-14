@@ -1,5 +1,5 @@
 function App() {
-  return <div>Hello Storybook!</div>;
+  return <div>Hello Storybook!</div>
 }
 
-export default App;
+export default App
